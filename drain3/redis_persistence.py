@@ -6,7 +6,7 @@ from drain3.persistence_handler import PersistenceHandler
 
 
 class RedisPersistence(PersistenceHandler):
-    def __init__(self, redis_host, redis_port, redis_db, redis_pass, is_ssl, redis_key, redis):
+    def __init__(self, redis_key, redis_host='localhost', redis_port=6379, redis_db=0, redis_pass=None, is_ssl=False, redis=None):
         self.redis_key = redis_key
 
         if isinstance(redis, Redis):
